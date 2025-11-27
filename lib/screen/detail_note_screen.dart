@@ -45,7 +45,7 @@ class DetailNoteScreenState extends State<DetailNoteScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final Color customOrange = Colors.orange.shade700;
+    final Color customBlue = const Color.fromARGB(255, 2, 88, 209);
 
     // Helper function to format the date
     String formatDate(DateTime date) {
@@ -61,7 +61,7 @@ class DetailNoteScreenState extends State<DetailNoteScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: customOrange,
+        backgroundColor: customBlue,
         elevation: 4,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -86,7 +86,7 @@ class DetailNoteScreenState extends State<DetailNoteScreen> {
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
-                              color: customOrange,
+                              color: customBlue,
                             ),
                           ),
                           const SizedBox(height: 10),
@@ -161,7 +161,7 @@ class DetailNoteScreenState extends State<DetailNoteScreen> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: customOrange,
+                                  backgroundColor: customBlue,
                                   padding: const EdgeInsets.symmetric(
                                     vertical: 12,
                                   ),

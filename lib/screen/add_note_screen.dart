@@ -13,7 +13,7 @@ class AddNoteScreen extends StatelessWidget {
     final TextEditingController titleController = TextEditingController(); // Controller for title input
     final TextEditingController contentController = TextEditingController(); // Controller for content input
 
-    final Color customOrange = Colors.orange.shade700; // Custom orange color for styling
+    final Color customBlue = const Color.fromARGB(255, 2, 88, 209); // Custom orange color for styling
 
     return Scaffold(
       appBar: AppBar(
@@ -24,7 +24,7 @@ class AddNoteScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: customOrange, // Custom color for AppBar
+        backgroundColor: customBlue, // Custom color for AppBar
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
@@ -51,16 +51,16 @@ class AddNoteScreen extends StatelessWidget {
                       controller: titleController,
                       decoration: InputDecoration(
                         labelText: 'Title',
-                        labelStyle: TextStyle(color: customOrange), // Label color
+                        labelStyle: TextStyle(color: customBlue), // Label color
                         filled: true,
-                        fillColor: Colors.orange.shade50, // Light orange background
+                        fillColor: const Color.fromARGB(255, 197, 227, 255), // Light orange background
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12), // Rounded corners for input field
                           borderSide: BorderSide.none,
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(color: customOrange), // Border color on focus
+                          borderSide: BorderSide(color: customBlue), // Border color on focus
                         ),
                       ),
                     ),
@@ -71,16 +71,16 @@ class AddNoteScreen extends StatelessWidget {
                       maxLines: 5, // Allow multi-line input for content
                       decoration: InputDecoration(
                         labelText: 'Description',
-                        labelStyle: TextStyle(color: customOrange), // Label color
+                        labelStyle: TextStyle(color: customBlue), // Label color
                         filled: true,
-                        fillColor: Colors.orange.shade50, // Light orange background
+                        fillColor: const Color.fromARGB(255, 197, 227, 255), // Light blue background
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12), // Rounded corners for input field
                           borderSide: BorderSide.none,
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(color: customOrange), // Border color on focus
+                          borderSide: BorderSide(color: customBlue), // Border color on focus
                         ),
                       ),
                     ),
@@ -96,7 +96,7 @@ class AddNoteScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10), // Rounded corners for the button
                 ),
-                backgroundColor: customOrange, // Custom color for the button
+                backgroundColor: customBlue, // Custom color for the button
               ),
               onPressed: () {
                 final title = titleController.text.trim(); // Get title text

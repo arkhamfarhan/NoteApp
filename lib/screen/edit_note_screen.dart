@@ -74,8 +74,8 @@ class EditNoteScreenState extends State<EditNoteScreen> {
   @override
   Widget build(BuildContext context) {
     // Define custom colors for the app theme
-    final Color customOrange = Colors.orange.shade700;
-    final Color darkOrange = Colors.orange.shade900;
+    final Color customBlue = const Color.fromARGB(255, 2, 88, 209);
+    final Color darkBlue = Colors.blue.shade900;
 
     return Scaffold(
       appBar: AppBar(
@@ -87,7 +87,7 @@ class EditNoteScreenState extends State<EditNoteScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: customOrange,
+        backgroundColor: customBlue,
         elevation: 4,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -117,16 +117,16 @@ class EditNoteScreenState extends State<EditNoteScreen> {
                       controller: _titleController,
                       decoration: InputDecoration(
                         labelText: 'Title',
-                        labelStyle: TextStyle(color: customOrange),
+                        labelStyle: TextStyle(color: customBlue),
                         filled: true,
-                        fillColor: Colors.orange.shade50,
+                        fillColor: const Color.fromARGB(255, 197, 227, 255),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(color: customOrange),
+                          borderSide: BorderSide(color: customBlue),
                         ),
                       ),
                     ),
@@ -137,16 +137,16 @@ class EditNoteScreenState extends State<EditNoteScreen> {
                       maxLines: 5,
                       decoration: InputDecoration(
                         labelText: 'Description',
-                        labelStyle: TextStyle(color: customOrange),
+                        labelStyle: TextStyle(color: customBlue),
                         filled: true,
-                        fillColor: Colors.orange.shade50,
+                        fillColor: const Color.fromARGB(255, 197, 227, 255),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(color: customOrange),
+                          borderSide: BorderSide(color: customBlue),
                         ),
                       ),
                     ),
@@ -177,9 +177,9 @@ class EditNoteScreenState extends State<EditNoteScreen> {
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.resolveWith((states) {
                   if (states.contains(WidgetState.pressed)) {
-                    return darkOrange;
+                    return darkBlue;
                   }
-                  return customOrange;
+                  return customBlue;
                 }),
                 foregroundColor: WidgetStateProperty.all(Colors.white),
                 overlayColor:

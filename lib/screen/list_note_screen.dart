@@ -56,8 +56,8 @@ class ListNoteScreenState extends State<ListNoteScreen> {
             context.push('/add-note'); // Navigate to the add note screen
           },
           backgroundColor: _isHovered
-              ? Colors.orange.shade900
-              : Colors.orange.shade700, // Change color on hover
+              ? const Color.fromARGB(255, 2, 64, 152)
+              : const Color.fromARGB(255, 2, 88, 209), // Change color on hover
           child: const Icon(Icons.add, color: Colors.white),
         ),
       ),
@@ -143,8 +143,8 @@ class ListNoteScreenState extends State<ListNoteScreen> {
                                       .add(DeleteNote(note)); // Dispatch delete event
                                 },
                                 color: _isHoveredDelete
-                                    ? Colors.orange.shade900
-                                    : Colors.orange.shade700, // Change delete icon color on hover
+                                    ? const Color.fromARGB(255, 178, 1, 1)
+                                    : const Color.fromARGB(255, 213, 2, 2), // Change delete icon color on hover
                               ),
                             ),
                           ),
